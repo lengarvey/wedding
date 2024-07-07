@@ -4,27 +4,334 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Len + Deb</title>
+        <script src="https://kit.fontawesome.com/45166d0dac.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/ccp3yav.css">
+        <link rel="icon" type="image/png" href="./images/favicon.png">
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css"
         />
         <style>
-          .inglewood-hills {
-            background-image: url('./inglewood-hills.jpg')
 
+          .inglewood-hills {
+            background-image: url('./inglewood-hills.jpg');
+            background-size: cover;
+            background-position: center;
           }
+
+          .is-super-tall {
+            height: 100vh;
+          }
+
+          .image.is-256x256 {
+            height: 256px;
+            width: 256px;
+          }
+
+          .small-covered-pic {
+            height: 300px !important;
+            object-fit: cover;
+          }
+
+          #images-wrapper {
+             line-height: 0;
+              -webkit-column-count: 5;
+              -webkit-column-gap: 0px;
+              -moz-column-count: 5;
+              -moz-column-gap: 0px;
+               column-count: 5;
+               column-gap: 1px;
+          }
+          #images-wrapper img {
+             width: 100% !important;
+             height: auto !important;
+             margin-bottom: 1px;
+          }
+
+          #photos {
+            /* Prevent vertical gaps */
+            line-height: 0;
+
+            -webkit-column-count: 5;
+            -webkit-column-gap:   0px;
+            -moz-column-count:    5;
+            -moz-column-gap:      0px;
+            column-count:         5;
+            column-gap:           1px;
+          }
+
+          #photos img {
+            /* Just in case there are inline attributes */
+            width: 100% !important;
+            height: auto !important;
+            margin-bottom: 1px;
+          }
+
+          @media (max-width: 1200px) {
+            #photos {
+            -moz-column-count:    4;
+            -webkit-column-count: 4;
+            column-count:         4;
+            }
+          }
+          @media (max-width: 1000px) {
+            #photos {
+            -moz-column-count:    3;
+            -webkit-column-count: 3;
+            column-count:         3;
+            }
+          }
+          @media (max-width: 800px) {
+            #photos {
+            -moz-column-count:    2;
+            -webkit-column-count: 2;
+            column-count:         2;
+            }
+          }
+          @media (max-width: 400px) {
+            #photos {
+            -moz-column-count:    1;
+            -webkit-column-count: 1;
+            column-count:         1;
+            }
+          }
+
+          .fancy {
+            font-family: "parfumerie-script";
+          }
+
+          .huge {
+            font-size: 5rem;
+          }
+
+          .large {
+            font-size: var(--bulma-size-1);
+            font-weight: 400;
+          }
+
+          .subtitle {
+            --bulma-subtitle-line-height: 1.75;
+            --bulma-subtitle-size: var(--bulma-size-6);
+            color: hsl(0, 0%, 21%);
+          }
+
+          .title {
+            color: hsl(0, 0%, 21%) !important;
+          }
+
+          body {
+            --bulma-body-family: "myriad-pro";
+          }
+
+          .is-3.fancy {
+            font-weight: 200;
+          }
+
+
+          .level h1.level-item {
+                overflow: hidden;
+                text-align: center;
+            }
+          .level h1.level-item:before,
+          .level h1.level-item:after {
+                background-color: #fff;
+                content: "";
+                display: inline-block;
+                height: 1px;
+                position: relative;
+                vertical-align: middle;
+                width: 50%;
+            }
+          .level h1.level-item:before {
+                right: 0.5em;
+                margin-left: -50%;
+            }
+          .level h1.level-item:after {
+                left: 0.5em;
+                margin-right: -50%;
+            }
+
+            :root {
+              --bulma-primary-h: 180deg;
+              --bulma-primary-s: 88%;
+              --bulma-primary-l: 56%;
+              --bulma-link-h: 197deg;
+                --bulma-link-s: 91%;
+                --bulma-link-l: 38%;
+              --bulma-info-h: 203deg;
+              --bulma-info-s: 76%;
+              --bulma-info-l: 37%;
+              --bulma-success-h: 203deg;
+              --bulma-success-s: 79%;
+              --bulma-success-l: 48%;
+              --bulma-warning-h: 208deg;
+              --bulma-warning-s: 78%;
+              --bulma-warning-l: 14%;
+              --bulma-scheme-h: 182;
+            }
+            body {
+              color: hsl(0, 0%, 21%);
+            }
+
+            a {
+              color: var(--bulma-link-bold-invert);
+            }
+
         </style>
     </head>
-    <body>
-        <div class="section">
-            <div class="columns">
-                <div class="column is-half has-background-light">
-                    Stuff goes here?
+    <body class="has-background-primary">
+
+            <div class="columns is-gapless">
+              <div class="column is-half inglewood-hills is-fullheight">
+              </div>
+                <div class="column is-half p-6">
+                  <section class="hero is-fullheight">
+                    <div class="hero-body">
+                      <div class="container has-text-centered">
+                        <div class="image is-256x256 container mb-5">
+                          <img class="is-rounded" src="./len-deb-kc.jpg"/>
+                        </div>
+                        <p class="title fancy huge">Deb & Len</p>
+                        <p class="subtitle mb-0">are getting married<br/>September 7th, 2024</p>
+                        <p class="is-size-6 has-text-link">
+                          <a href="#where">where</a>&nbsp;-
+                          <a href="#when">when</a>&nbsp;-
+                          <a href="#about">about</a>&nbsp;-
+                          <a href="#pics">pics</a>
+                        </p>
+                      </div>
+                    </div>
+                  </section>
                 </div>
-                <div class="column inglewood-hills">
-                  <div class="section is-medium"></div>
+
+                <div class="column is-full is-hidden-tablet">
+                  <img class="" src="./inglewood-hills.jpg"/>
                 </div>
+
             </div>
-        </div>
-    </body>
+<section  class="hero is-small">
+  <div class="level">
+    <h1 class="level-item fancy large">Where is it?</h1>
+  </div>
+            <div class="columns" id="where">
+              <div class="column is-6 is-offset-2">
+
+
+                      <div class="hero-body">
+                        <p class="title fancy"><a href="https://maps.app.goo.gl/HYj9V1wCVBd56shy7" target="_blank">Inglewood Estate</a></p>
+                        <p class="subtitle">
+                          Located in picturesque Kangaroo Ground at the gateway to the Yarra Valley a short 45 minute drive from the city.
+                          <br/><br/>
+                          If you can't drive we recommend organising an Uber - particularly for the trip home. The ceremony and the reception is all in one place.
+                        </p>
+                      </div>
+
+
+
+              </div>
+
+              <div class="column">
+                <div class="image is-small"><img src="./inglewood-lavender.jpg"/></div>
+              </div>
+            </div>
+</section>
+
+<section>
+  <div class="level">
+    <h1 class="level-item fancy large">Timing</h1>
+  </div>
+            <div class="columns" id="when">
+              <div class="column is-one-third is-hidden-mobile"><div class="image is-small"><img class="small-covered-pic is-hidden-mobile" src="./table-setting.jpg"/></div></div>
+              <div class="column is-two-thirds">
+                <div class="hero">
+                  <div class="hero-body">
+
+                    <p class="subtitle">
+                      🕞 Arrive around 3:30pm<br/>
+                      💒 Ceremony starts at 4:00pm<br/>
+                      🍸 Cocktail and Reception starts at 5:00pm<br/>
+                      👰‍♀️ We'll join you all at around 5:30pm<br/>
+                      🕺 Party until late (we're still figuring out the end time)<br/>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+</section>
+
+<section class="hero is-small" id="about">
+      <div class="level">
+        <h1 class="level-item fancy large">Info for the Day</h1>
+      </div>
+            <div class="columns">
+                  <div class="column is-4 is-offset-2">
+                    <div class="hero-body">
+                        <h1 class="title is-3 fancy">
+                         🧒 Children
+                        </h1>
+                        <p class="subtitle is-5">Children are welcome to attend the ceremony, but we respectfully advise that the reception will be adults only.</p>
+                    </div>
+                  </div>
+
+                  <div class="column is-4">
+                    <div class="hero-body">
+                      <h1 class="title is-3 fancy">
+                       🎁 Gifts
+                      </h1>
+                      <p class="subtitle is-5">Your gift of love & support is all we need on our special day, however if you would like to give a gift we will have a wishing well at our reception.</p>
+                    </div>
+                  </div>
+            </div>
+
+
+                <div class="columns">
+                  <div class="column is-4 is-offset-2">
+                    <div class="hero-body">
+                      <h1 class="title is-3 fancy">
+                       🚕 Transport
+                      </h1>
+                      <p class="subtitle is-5">Taxis aren't super reliable at Inglewood, so we recommend pre-booking an Uber (you can do it now, or on the day). There's parking on site so if you're driving it should be no hassle.</p>
+                    </div>
+                  </div>
+
+                  <div class="column is-4">
+                    <div class="hero-body">
+                      <h1 class="title is-3 fancy">
+                       👗 Dress Code
+                      </h1>
+                      <p class="subtitle is-5">We're looking for an excuse to dress up, so come semi-formal.</p>
+                    </div>
+                  </div>
+                </div>
+</section >
+<section id="pics">
+  <div class="level">
+    <h1 class="level-item fancy large">Gallery</h1>
+  </div>
+  <div class="level">
+    <p class="level-item">Photos from the day, but until then photos of us ❤️</p>
+  </div>
+  <div class="columns" id="pics">
+    <div class="column is-full-width ">
+      <div id="photos">
+         <img src="./gallery/IMG_0351.jpeg" alt="picture 1" />
+         <img src="./gallery/DSC01030.jpeg" alt="picture 1" />
+         <img src="./gallery/DSC02929.jpeg" alt="picture 1" />
+         <img src="./gallery/DSC06012.jpeg" alt="picture 1" />
+         <img src="./gallery/DSC08973.jpeg" alt="picture 1" />
+         <img src="./gallery/IMG_0350.jpeg" alt="picture 1" />
+         <img src="./gallery/IMG_3020.jpeg" alt="picture 1" />
+         <img src="./gallery/IMG_3535.jpeg" alt="picture 1" />
+         <img src="./gallery/IMG_4453.jpeg" alt="picture 1" />
+         <img src="./gallery/IMG_4849.jpeg" alt="picture 1" />
+         <img src="./gallery/IMG_4991.jpeg" alt="picture 1" />
+
+         <img src="./gallery/DSC00266 Edited.jpeg" alt="picture 1" />
+         <img src="./gallery/IMG_6712.jpeg" alt="picture 1" />
+      </div>
+    </div>
+  </div>
+</section>
+
+    </body >
 </html>
